@@ -58,7 +58,7 @@ $query = query("SELECT * FROM kandungan_sunscreen k INNER JOIN peringkat p ON k.
     <div class="container">
 
         <div class="row mt-2 d-flex justify-content-center ">
-            <div class="col-md-8">
+            <div class="col-md-11 mx-auto">
 
                 <div class="display-4 text-center mb-2">
                     Peringkat Data Kandungan

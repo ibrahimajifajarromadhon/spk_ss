@@ -46,6 +46,9 @@
     <div class="container">
         <div class="login-container">
             <h2>Login</h2>
+            <?php
+            session_start();
+            ?>
             <?php if (isset($_SESSION['login_error'])): ?>
                 <p class="error"><?php echo $_SESSION['login_error']; ?></p>
                 <?php unset($_SESSION['login_error']); ?>
