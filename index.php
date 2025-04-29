@@ -54,7 +54,7 @@ INNER JOIN
 
     <div class="container">
 
-        <div class="row mt-5">
+        <div class="row mt-2">
             <div class="col-md-12 justify-content-center">
 
 
@@ -66,7 +66,7 @@ INNER JOIN
                 </div>
                 <hr>
                 <div class="row mt-2">
-                    <div class="col-md-8 mx-auto">
+                    <div class="col-md-11 mx-auto">
                         <p>Dibawah ini adalah tabel kandungan sunscreen yang telah ditetapkan</p>
                         <div class="card">
                             <div class="card-body pb-0">

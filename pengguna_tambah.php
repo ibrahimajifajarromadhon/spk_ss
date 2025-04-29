@@ -50,7 +50,10 @@ if (isset($_POST['tambahPengguna'])) {
     <div class="container">
 
         <div class="row mt-2 d-flex justify-content-center">
-            <div class="col-md-8">
+            <div class="display-4 text-center mb-2">
+                Tambah Data Profil Pengguna
+            </div>
+            <div class="col-md-11">
 
                 <!-- jika tombol tambah di klik -> mengirimkan dala lewat method post -->
                 <?php
@@ -68,7 +71,7 @@ if (isset($_POST['tambahPengguna'])) {
                         <div class="card-body">
 
                             <div class="form-group">
-                                <label for="kriteria"><?= $kriteria[0]['nama']; ?></label>
+                                <label for="jenis_kulit"><?= $kriteria[0]['nama']; ?></label>
                                 <select name="jenis_kulit" id="jenis_kulit" class="form-control" required>
                                     <option value="">Pilih <?= strtolower($kriteria[0]['nama']); ?></option>
                                     <?php
@@ -92,7 +95,7 @@ if (isset($_POST['tambahPengguna'])) {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="kriteria"><?= $kriteria[1]['nama']; ?></label>
+                                <label for="masalah_kulit"><?= $kriteria[1]['nama']; ?></label>
                                 <select name="masalah_kulit" id="masalah_kulit" class="form-control" required>
                                     <option value="">Pilih <?= strtolower($kriteria[1]['nama']); ?></option>
                                     <?php
@@ -116,7 +119,7 @@ if (isset($_POST['tambahPengguna'])) {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="kriteria"><?= $kriteria[2]['nama']; ?></label>
+                                <label for="reaksi_alergi"><?= $kriteria[2]['nama']; ?></label>
                                 <select name="reaksi_alergi" id="reaksi_alergi" class="form-control" required>
                                     <option value="">Pilih <?= strtolower($kriteria[2]['nama']); ?></option>
                                     <?php
@@ -140,7 +143,7 @@ if (isset($_POST['tambahPengguna'])) {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="kriteria"><?= $kriteria[3]['nama']; ?></label>
+                                <label for="aktivitas_pengguna"><?= $kriteria[3]['nama']; ?></label>
                                 <select name="aktivitas_pengguna" id="aktivitas_pengguna" class="form-control" required>
                                     <option value="">Pilih <?= strtolower($kriteria[3]['nama']); ?></option>
                                     <?php

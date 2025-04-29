@@ -48,7 +48,6 @@
             <h2>Daftar Akun Baru</h2>
             <?php if (isset($_SESSION['register_error'])): ?>
                 <p class="error"><?php echo $_SESSION['register_error']; ?></p>
-                <?php unset($_SESSION['register_error']); ?>
             <?php endif; ?>
             <form action="auth_process.php" method="post">
                 <div class="form-group">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Apr 2025 pada 12.25
+-- Waktu pembuatan: 29 Apr 2025 pada 09.47
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -121,7 +121,8 @@ CREATE TABLE `pengguna` (
 INSERT INTO `pengguna` (`id_pengguna`, `nama`, `email`, `password`) VALUES
 (1, 'Udin', 'udin@gmail.com', '$2y$10$uCoQzrqvuz5REt5IZgltF.vp.uFkXigmxzAWUgGM5ICInnqvzsPCq'),
 (2, 'tes', 'tes@gmail.com', '$2y$10$UsN8XAALKk9oDwB2yZbSN.vOMSGScScmktHuIox7QsrlemEGvSVXm'),
-(3, 'Dinda', 'dinda12345@gmail.com', '$2y$10$dK.7Kc7KSeTgxshjvhE/iuEHLB9ibsV3Q09NrZSXGmxESPUcX0njm');
+(3, 'Dinda', 'dinda12345@gmail.com', '$2y$10$dK.7Kc7KSeTgxshjvhE/iuEHLB9ibsV3Q09NrZSXGmxESPUcX0njm'),
+(4, 'devi', 'devii1234@gmail.com', '$2y$10$zSKXKSFzrCiljiibVx2KeOc7OajinkifjdYrqxlbOF8FG3hQzmLHS');
 
 -- --------------------------------------------------------
 
@@ -149,22 +150,30 @@ INSERT INTO `peringkat` (`id_peringkat`, `kandungan_id`, `pengguna_id`, `nilai_t
 (22, 6, 1, 3.55),
 (23, 7, 1, 2.875),
 (24, 8, 1, 3.775),
-(97, 1, 2, 3.45),
-(98, 2, 2, 4.525),
-(99, 3, 2, 4.25),
-(100, 4, 2, 2.975),
-(101, 5, 2, 3.725),
-(102, 6, 2, 3.525),
-(103, 7, 2, 1.625),
-(104, 8, 2, 3.45),
-(129, 1, 3, 2.6),
-(130, 2, 3, 3.275),
-(131, 3, 3, 3.4),
-(132, 4, 3, 4.45),
-(133, 5, 3, 3.175),
-(134, 6, 3, 3.425),
-(135, 7, 3, 3.7),
-(136, 8, 3, 3.125);
+(161, 1, 2, 5),
+(162, 2, 2, 3.15),
+(163, 3, 2, 2.95),
+(164, 4, 2, 2.3),
+(165, 5, 2, 2.35),
+(166, 6, 2, 3.55),
+(167, 7, 2, 2.875),
+(168, 8, 2, 3.775),
+(169, 1, 3, 2.6),
+(170, 2, 3, 3.275),
+(171, 3, 3, 3.4),
+(172, 4, 3, 4.45),
+(173, 5, 3, 3.175),
+(174, 6, 3, 3.425),
+(175, 7, 3, 3.7),
+(176, 8, 3, 3.125),
+(177, 1, 4, 2.9),
+(178, 2, 4, 4.2),
+(179, 3, 4, 3.7),
+(180, 4, 4, 3.475),
+(181, 5, 4, 4.3),
+(182, 6, 4, 4.325),
+(183, 7, 4, 2.725),
+(184, 8, 4, 4.025);
 
 -- --------------------------------------------------------
 
@@ -187,8 +196,9 @@ CREATE TABLE `preferensi_pengguna` (
 
 INSERT INTO `preferensi_pengguna` (`id_preferensi`, `id_pengguna`, `profil_jenis_kulit`, `profil_masalah_kulit`, `profil_reaksi_alergi`, `profil_aktivitas_pengguna`) VALUES
 (4, 1, 10, 15, 20, 25),
-(5, 2, 6, 15, 20, 24),
-(6, 3, 8, 11, 20, 23);
+(5, 2, 10, 15, 20, 25),
+(6, 3, 8, 11, 20, 23),
+(7, 4, 7, 15, 16, 22);
 
 -- --------------------------------------------------------
 
@@ -307,19 +317,19 @@ ALTER TABLE `kriteria`
 -- AUTO_INCREMENT untuk tabel `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `peringkat`
 --
 ALTER TABLE `peringkat`
-  MODIFY `id_peringkat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id_peringkat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
 
 --
 -- AUTO_INCREMENT untuk tabel `preferensi_pengguna`
 --
 ALTER TABLE `preferensi_pengguna`
-  MODIFY `id_preferensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_preferensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `sub_kriteria`

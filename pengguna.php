@@ -79,9 +79,11 @@ $pengguna = query("SELECT
     ?>
 
     <div class="container">
-
-        <div class="row mt-5 mb-5">
-            <div class="col-md-12">
+        <div class="display-4 text-center mb-2">
+            Data Profil Pengguna
+        </div>
+        <div class="row mt-2 mb-5">
+            <div class="col-md-11 mx-auto">
 
                 <!-- button modal box - tambah kriteria -->
                 <a href="pengguna_tambah.php" class="btn btn-primary btn-block mb-2">
@@ -126,9 +128,11 @@ $pengguna = query("SELECT
                     </div>
                 </div>
 
+                <hr>
+
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-11 mx-auto">
                 <div class="card">
                     <div class="card-header badge-info">
                         <div class="row">
@@ -184,7 +188,7 @@ $pengguna = query("SELECT
                 </div>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-11 mx-auto">
 
                 <button type="submit" name="hasil" class="btn btn-primary btn-block mt-2">Hitung</button>
                 </form>
@@ -491,12 +495,11 @@ $pengguna = query("SELECT
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js" integrity="sha512-7yA/d79yIhHPvcrSiB8S/7TyX0OxlccU8F/kuB8mHYjLlF1MInPbEohpoqfz0AILoq5hoD7lELZAYYHbyeEjag==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
 
 </body>
 

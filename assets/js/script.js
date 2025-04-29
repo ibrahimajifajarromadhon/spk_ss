@@ -8,17 +8,17 @@
 //     }
 // }
 
-// Tampilkan form tambah record jika button tambah-record di klik
-function tampilCardTambah() {
-    let cardTambah = $('#card-tambah');
-    if (cardTambah.is(':hidden')) {
-        cardTambah.show("fast");
-    } else {
-        cardTambah.hide("fast");
-    }
-}
+// // Tampilkan form tambah record jika button tambah-record di klik
+// function tampilCardTambah() {
+//     let cardTambah = $('#card-tambah');
+//     if (cardTambah.is(':hidden')) {
+//         cardTambah.show("fast");
+//     } else {
+//         cardTambah.hide("fast");
+//     }
+// }
 
-// Tooltip
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
+// // Tooltip
+// $(function () {
+//     $('[data-toggle="tooltip"]').tooltip()
+// })
