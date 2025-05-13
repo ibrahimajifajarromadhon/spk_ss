@@ -86,7 +86,7 @@ $pengguna = query("SELECT
             <div class="col-md-11 mx-auto">
 
                 <!-- button modal box - tambah kriteria -->
-                <a href="pengguna_tambah.php" class="btn btn-primary btn-block mb-2">
+                <a href="pengguna_tambah.php" class="btn btn-success btn-block mb-2">
                     <i class="fa fa-plus"></i> Tambah Profil Pengguna
                 </a>
 

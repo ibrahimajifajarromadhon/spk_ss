@@ -57,7 +57,6 @@ INNER JOIN
         <div class="row mt-2">
             <div class="col-md-12 justify-content-center">
 
-
                 <div class="display-4 text-center">
                     Selamat Datang, di
                 </div>
@@ -73,17 +72,17 @@ INNER JOIN
                                 <table class="table table-sm table-striped text-center">
                                     <thead>
                                         <tr>
-                                            <th class="text-left">Nama Kandungan</th>
-                                            <th>Jenis Kulit</th>
-                                            <th>Masalah Kulit</th>
-                                            <th>Reaksi Alergi</th>
-                                            <th>Aktivitas Pengguna</th>
+                                            <th width="15%">Nama Kandungan</th>
+                                            <th width="15%">Jenis Kulit</th>
+                                            <th width="15%">Masalah Kulit</th>
+                                            <th width="15%">Reaksi Alergi</th>
+                                            <th width="30%">Aktivitas Pengguna</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php foreach ($kandungan as $k) : ?>
                                             <tr>
-                                                <td class="text-left"><?= $k['nama_kandungan']; ?></td>
+                                                <td><?= $k['nama_kandungan']; ?></td>
                                                 <td><?= $k['nama_jk']; ?></td>
                                                 <td><?= $k['nama_mk']; ?></td>
                                                 <td><?= $k['nama_al']; ?></td>

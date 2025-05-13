@@ -169,7 +169,7 @@ if (isset($_POST['tambahPengguna'])) {
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" name="tambahPengguna" class="btn btn-primary btn-block"><i class="fa fa-plus"></i> Tambah Data</button>
+                        <button type="submit" name="tambahPengguna" class="btn btn-success btn-block"><i class="fa fa-plus"></i> Tambah Data</button>
                     </div>
                 </form>
 

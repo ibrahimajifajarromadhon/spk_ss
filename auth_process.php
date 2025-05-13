@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 require_once('functions.php');
 
@@ -6,6 +6,7 @@ if (isset($_POST['register'])) {
     $nama = $_POST['nama'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $role = $_POST['role'];
 
     $stmt_check = $conn->prepare("SELECT email FROM pengguna WHERE email = ?");
     $stmt_check->bind_param("s", $email);
@@ -18,8 +19,8 @@ if (isset($_POST['register'])) {
         exit();
     }
 
-    $stmt_insert = $conn->prepare("INSERT INTO pengguna (nama, email, password) VALUES (?, ?, ?)");
-    $stmt_insert->bind_param("sss", $nama, $email, $password);
+    $stmt_insert = $conn->prepare("INSERT INTO pengguna (nama, email, password, role) VALUES (?, ?, ?, ?)");
+    $stmt_insert->bind_param("ssss", $nama, $email, $password, $role);
     if ($stmt_insert->execute()) {
         $_SESSION['register_success'] = "Registrasi berhasil. Silakan login.";
         header("Location: login.php");
@@ -35,7 +36,7 @@ if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $stmt_login = $conn->prepare("SELECT id_pengguna, nama, password FROM pengguna WHERE email = ?");
+    $stmt_login = $conn->prepare("SELECT id_pengguna, nama, password, role FROM pengguna WHERE email = ?");
     $stmt_login->bind_param("s", $email);
     $stmt_login->execute();
     $result_login = $stmt_login->get_result();
@@ -44,7 +45,12 @@ if (isset($_POST['login'])) {
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['pengguna_id'] = $user['id_pengguna'];
         $_SESSION['nama_user'] = $user['nama'];
-        header("Location: index.php");
+        $_SESSION['role'] = $user['role'];
+        if ($_SESSION['role'] === 'admin') {
+            header("Location: admin/kelola_pengguna.php"); 
+        } else {
+            header("Location: index.php");
+        }
         exit();
     } else {
         $_SESSION['login_error'] = "Email atau password salah.";
@@ -58,5 +64,3 @@ if (isset($_GET['logout'])) {
     header("Location: login.php");
     exit();
 }
-
-?>
